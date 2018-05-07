@@ -15,6 +15,7 @@
         <module>service-ribbon</module>
         <module>service-zuul</module>
         <module>service-zipkin</module>
+        <module>service-provider</module>
     </modules>
 
     <parent>
@@ -23,6 +24,9 @@
         <version>1.5.12.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <properties>
+
+    </properties>
 
     <dependencies>
         <dependency>
@@ -35,6 +39,32 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <!--容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
+        </dependency>
+        <!--热部署-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>springloaded</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+        <!--帮你写get、set方法-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
 </project>
